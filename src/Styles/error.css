@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+.error-container {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    color: #ff6060;
+}
+
+.error {
+    margin-top: 50px;
+    width: 80%;
+    min-height: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.number-error {
+    font-size: 250px;
+    font-weight: 600;
+}
+
+.text-error {
+    font-size: 24px;
+    margin-bottom: 100px;
+}
+
+.link-error {
+    font-size: 18px;
+    color: #ff6060;
+}

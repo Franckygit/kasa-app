@@ -1,11 +1,16 @@
-import React from 'react';
+import React from 'react'
+import Error404 from '../Components/Error'
+import Footer from '../Components/Footer'
+import Header from '../Components/Header'
 
 const Error = () => {
     return (
-        <div>
-            Error 404
-        </div>
-    );
-};
+        <>
+            <Header />
+            <Error404 />
+            <Footer />
+        </>
+    )
+}
 
-export default Error;
+export default Error
