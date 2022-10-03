@@ -3,7 +3,7 @@ import '../Styles/about.css'
 
 const AboutInfos = () => {
     return (
-        <div className="collapse-container">
+        <div className="collapse-container-about">
             <div className="collapse">
                 <div className="collapse__item">
                     <input
