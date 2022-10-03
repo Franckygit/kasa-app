@@ -4,16 +4,14 @@ import '../Styles/error.css'
 
 const Error = () => {
     return (
-        <div className="error-container">
-            <div className="error">
-                <div className="number-error">404</div>
-                <div className="text-error">
-                    Oups! La page que vous demandez n'existe pas.
-                </div>
-                <NavLink className="link-error" as={NavLink} to="/">
-                    Retournez à l'accueil
-                </NavLink>
+        <div className="error">
+            <div className="number-error">404</div>
+            <div className="text-error">
+                Oups! La page que vous demandez n'existe pas.
             </div>
+            <NavLink className="link-error" as={NavLink} to="/">
+                Retournez sur la page d'accueil
+            </NavLink>
         </div>
     )
 }

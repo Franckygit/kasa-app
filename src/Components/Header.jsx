@@ -6,22 +6,19 @@ import logo from '../Assets/logo.svg'
 const Header = () => {
     return (
         <div className="header-container">
-            <div className="header">
-                <div className="logo-header">
-                    <a href="/">
-                        <img src={logo} alt="logo" />
-                    </a>
+            <div className="navbar">
+                <NavLink to="/">
+                    <img src={logo} alt="logo" />
+                </NavLink>
+
+                <div className="container">
+                    <NavLink className="link" as={NavLink} to="/">
+                        Accueil
+                    </NavLink>
+                    <NavLink className="link" as={NavLink} to="/about">
+                        A propos
+                    </NavLink>
                 </div>
-                <nav className="navbar">
-                    <ul>
-                        <NavLink className="link" as={NavLink} to="/">
-                            Accueil
-                        </NavLink>
-                        <NavLink className="link" as={NavLink} to="/about">
-                            A propos
-                        </NavLink>
-                    </ul>
-                </nav>
             </div>
         </div>
     )
