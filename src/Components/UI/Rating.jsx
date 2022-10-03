@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { RatingContainer, Star } from './styled'
+import { RatingContainer, Star } from '../../Styles/rating'
 
 import '../../Styles/rating.js'
 

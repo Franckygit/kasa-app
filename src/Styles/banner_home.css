@@ -12,7 +12,7 @@
 .background {
     display: flex;
     border-radius: 15px;
-    width: 80%;
+    min-width: 80%;
     filter: grayscale(50%) brightness(75%) contrast(2);
     background-size: cover;
     background-image: url(../Assets/cut-cliffs.PNG);

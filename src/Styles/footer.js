@@ -1,9 +1,6 @@
-* {
-    margin: 0px;
-    font-family: 'Montserrat';
-}
+import styled from 'styled-components'
 
-.footer-container {
+const FooterWrapper = styled.footer`
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -13,20 +10,24 @@
     padding-top: 66px;
     box-sizing: border-box;
     background-color: #000;
-    margin-top: 10px;
-}
+`
 
-.logo-footer {
-    color: white;
-    font-size: 50px;
+const FooterLogo = styled.img`
     height: 39.5px;
-    cursor: pointer;
-}
+`
 
-.copyright-text {
+const FooterText = styled.span`
     color: white;
     padding: 29px 0;
     align-self: center;
-    font-size: 17px;
+
+    font-size: 12px;
     line-height: 17px;
-}
+
+    @media (min-width: 1024px) {
+        font-size: 24px;
+        line-height: 34px;
+    }
+`
+
+export { FooterWrapper, FooterLogo, FooterText }

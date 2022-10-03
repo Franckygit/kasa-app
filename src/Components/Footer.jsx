@@ -1,21 +1,16 @@
-import React from 'react'
-import '../Styles/footer.css'
+import { Link } from 'react-router-dom'
 import logo from '../Assets/logo-white.svg'
+import { FooterWrapper, FooterLogo, FooterText } from '../Styles/footer'
 
 const Footer = () => {
     return (
-        <div className="footer-container">
-            <div className="footer">
-                <div className="logo-footer">
-                    <a href="/">
-                        <img src={logo} alt="logo" />
-                    </a>
-                </div>
-                <div className="copyright-text">
-                    © 2020 Kasa. All rights reserved
-                </div>
-            </div>
-        </div>
+        <FooterWrapper>
+            <Link to="/">
+                <FooterLogo src={logo} alt="kasa-logo" />
+            </Link>
+
+            <FooterText>© 2020 Kasa. All rights reserved</FooterText>
+        </FooterWrapper>
     )
 }
 

@@ -1,6 +1,4 @@
 import React from 'react'
-import Footer from '../Components/Footer'
-import Header from '../Components/Header'
 import Banner from '../Components/Banner/Banner_home'
 import '../Styles/home.css'
 import Card from '../Components/Card'
@@ -10,7 +8,6 @@ const Home = () => {
     return (
         <>
             <div className="content">
-                <Header />
                 <Banner />
                 <div className="section">
                     <div className="houses">
@@ -22,8 +19,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
-            <Footer />
         </>
     )
 }

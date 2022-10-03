@@ -6,7 +6,7 @@
 .profile-name {
     font-weight: 500;
     text-align: right;
-    font-size: 12px;
+    font-size: 18px;
     line-height: 17px;
     letter-spacing: 0em;
     text-align: right;
@@ -17,8 +17,8 @@
 }
 
 .profile-picture {
-    width: 32px;
-    height: 32px;
+    width: 46px;
+    height: 46px;
     border-radius: 100%;
     object-fit: cover;
 }

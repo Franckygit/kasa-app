@@ -1,12 +1,18 @@
-import React from 'react'
 import { useState } from 'react'
 import PropTypes from 'prop-types'
-import '../Styles/carousel.css'
+import {
+    Flex,
+    CarouselWrapper,
+    CarouselContainer,
+    CarouselImage,
+    CarouselArrow,
+    CarouselText,
+} from '../Styles/carousel'
 
 import arrowLeft from '../Assets/arrow-left.svg'
 import arrowRight from '../Assets/arrow-right.svg'
 
-const Carousel = ({ images }) => {
+function Carousel({ images }) {
     const [currentIndex, setCurrentIndex] = useState(0)
 
     const plusSlides = (n) => {
@@ -16,6 +22,7 @@ const Carousel = ({ images }) => {
             index = currentIndex + n
         }
 
+        // check up loop
         if (index >= images.length) {
             index = 0
         }
@@ -28,32 +35,32 @@ const Carousel = ({ images }) => {
     }
 
     return (
-        <div className="carousel-flex">
-            <div className="carousel-container">
-                <img
+        <Flex>
+            <CarouselWrapper>
+                <CarouselImage
                     src={images[currentIndex]}
-                    alt={'slide-' + currentIndex}
-                    className="carousel-image"
+                    alt={'silde-' + currentIndex}
                 />
-                <div className="carousel">
-                    <img
-                        className="carousel-arrow"
+
+                <CarouselContainer>
+                    <CarouselArrow
                         src={arrowLeft}
                         alt=""
                         onClick={() => plusSlides(-1)}
                     />
-                    <span className="carousel-text">
+
+                    <CarouselText>
                         {currentIndex + 1}/{images.length}
-                    </span>
-                    <img
-                        className="carousel-arrow"
+                    </CarouselText>
+
+                    <CarouselArrow
                         src={arrowRight}
                         alt=""
                         onClick={() => plusSlides(1)}
                     />
-                </div>
-            </div>
-        </div>
+                </CarouselContainer>
+            </CarouselWrapper>
+        </Flex>
     )
 }
 

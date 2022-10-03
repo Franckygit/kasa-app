@@ -6,7 +6,7 @@
 }
 
 .title-infos {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 500;
     line-height: 26px;
     display: flex;
@@ -14,7 +14,7 @@
 }
 
 .location-infos {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 20px;
     font-weight: 500;
 }
