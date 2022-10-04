@@ -1,18 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {
+    ProfileContainer,
+    ProfileName,
+    ProfilePicture,
+} from '../../Styles/ProfileInfos.js'
 
-import '../../Styles/ProfileInfos.css'
+import '../../Styles/ProfileInfos.js'
 
 const ProfileInfos = ({ host }) => {
     return (
-        <div className="profile-container">
-            <div className="profile-name">{host.name}</div>
-            <img
-                className="profile-picture"
-                src={host.picture}
-                alt={host.name}
-            />
-        </div>
+        <ProfileContainer>
+            <ProfileName>{host.name}</ProfileName>
+            <ProfilePicture src={host.picture} alt={host.name} />
+        </ProfileContainer>
     )
 }
 

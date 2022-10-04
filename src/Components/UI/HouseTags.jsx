@@ -1,19 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import '../../Styles/HouseTags.css'
+import '../../Styles/HouseTags.js'
+import { TagsContainer, Tag } from '../../Styles/HouseTags.js'
 
 const HouseTags = ({ tags }) => {
     return (
-        <div>
-            <div className="tags-container">
-                {tags.length > 0 &&
-                    tags.map((tag) => (
-                        <span className="tag" key={tag}>
-                            {tag}
-                        </span>
-                    ))}
-            </div>
-        </div>
+        <TagsContainer>
+            {tags.length > 0 && tags.map((tag) => <Tag key={tag}>{tag}</Tag>)}
+        </TagsContainer>
     )
 }
 

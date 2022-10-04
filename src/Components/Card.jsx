@@ -1,25 +1,21 @@
 import React from 'react'
-import '../Styles/card.css'
+import '../Styles/card.js'
 import PropTypes from 'prop-types'
-import { NavLink } from 'react-router-dom'
+import { Card, CardName, CardOverlay, CardImage } from '../Styles/card.js'
 
-const Card = ({ logement }) => {
+const oneCard = ({ logement }) => {
     return (
-        <NavLink className="card" to={`/logement/${logement.id}`}>
-            <img
-                className="card-image"
-                src={logement.cover}
-                alt={logement.title}
-            />
-            <div className="card-overlay">
-                <div className="card-name">{logement.title}</div>
-            </div>
-        </NavLink>
+        <Card to={`/logement/${logement.id}`}>
+            <CardImage src={logement.cover} alt={logement.title} />
+            <CardOverlay>
+                <CardName>{logement.title}</CardName>
+            </CardOverlay>
+        </Card>
     )
 }
 
-Card.propTypes = {
+oneCard.propTypes = {
     logement: PropTypes.object.isRequired,
 }
 
-export default Card
+export default oneCard

@@ -1,24 +1,21 @@
 import React from 'react'
 import Banner from '../Components/Banner/Banner_home'
-import '../Styles/home.css'
+import '../Styles/home.js'
 import Card from '../Components/Card'
 import data from '../Data/logements.json'
+import { Section, Houses } from '../Styles/home.js'
 
 const Home = () => {
     return (
         <>
-            <div className="content">
-                <Banner />
-                <div className="section">
-                    <div className="houses">
-                        {data.map((logement) => {
-                            return (
-                                <Card logement={logement} key={logement.id} />
-                            )
-                        })}
-                    </div>
-                </div>
-            </div>
+            <Banner />
+            <Section>
+                <Houses>
+                    {data.map((logement) => {
+                        return <Card logement={logement} key={logement.id} />
+                    })}
+                </Houses>
+            </Section>
         </>
     )
 }

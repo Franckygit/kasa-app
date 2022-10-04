@@ -1,11 +1,13 @@
-.tags-container {
+import styled from 'styled-components'
+
+const TagsContainer = styled.div`
     gap: 10px;
     flex-wrap: wrap;
     display: inline-flex;
     align-items: center;
-}
+`
 
-.tag {
+const Tag = styled.span`
     height: 18px;
     min-width: 84px;
     padding: 3px 22px;
@@ -17,14 +19,14 @@
 
     font-size: 10px;
     font-weight: 500;
-}
 
-@media (min-width: 1024px) {
-    .tag {
+    @media (min-width: 1024px) {
         height: 25px;
         font-size: 14px;
         min-width: 115px;
         padding: 3px 30px;
         border-radius: 10px;
     }
-}
+`
+
+export { TagsContainer, Tag }

@@ -6,17 +6,20 @@ import Home from './Pages/Home'
 import House from './Pages/House'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
+import { Content } from './Styles/content'
 
 const App = () => {
     return (
         <BrowserRouter>
-            <Header />
-            <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/about" element={<About />}></Route>
-                <Route path="/logement/:id" element={<House />}></Route>
-                <Route path="*" element={<Error />}></Route>
-            </Routes>
+            <Content>
+                <Header />
+                <Routes>
+                    <Route path="/" element={<Home />}></Route>
+                    <Route path="/about" element={<About />}></Route>
+                    <Route path="/logement/:id" element={<House />}></Route>
+                    <Route path="*" element={<Error />}></Route>
+                </Routes>
+            </Content>
             <Footer />
         </BrowserRouter>
     )

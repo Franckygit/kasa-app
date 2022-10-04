@@ -1,13 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import '../../Styles/HouseInfos.css'
+import '../../Styles/HouseInfos.js'
+import {
+    LocationInfos,
+    TitleInfos,
+    HouseInfosBox,
+} from '../../Styles/HouseInfos.js'
 
 const HouseInfos = ({ title, location }) => {
     return (
-        <div className="house-infos-box">
-            <div className="title-infos">{title}</div>
-            <div className="location-infos">{location}</div>
-        </div>
+        <HouseInfosBox>
+            <TitleInfos>{title}</TitleInfos>
+            <LocationInfos>{location}</LocationInfos>
+        </HouseInfosBox>
     )
 }
 

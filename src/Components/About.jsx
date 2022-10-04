@@ -1,5 +1,4 @@
 import React from 'react'
-import '../Styles/about.css'
 import Collapse from './Collapse'
 import styled from 'styled-components'
 

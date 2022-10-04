@@ -26,43 +26,39 @@ const House = () => {
 
     return (
         <>
-            <div className="content">
-                <Carousel images={logement.pictures} />
-                <Flex>
-                    <Container>
-                        <Columns>
-                            <InfosWrapper>
-                                <HouseInfos
-                                    title={logement.title}
-                                    location={logement.location}
-                                />
-                                <Tags tags={logement.tags} />
-                            </InfosWrapper>
+            <Carousel images={logement.pictures} />
+            <Flex>
+                <Container>
+                    <Columns>
+                        <InfosWrapper>
+                            <HouseInfos
+                                title={logement.title}
+                                location={logement.location}
+                            />
+                            <Tags tags={logement.tags} />
+                        </InfosWrapper>
 
-                            <ProfilWrapper>
-                                <HostProfile host={logement.host} />
-                                <Rating rating={logement.rating} />
-                            </ProfilWrapper>
-                        </Columns>
+                        <ProfilWrapper>
+                            <HostProfile host={logement.host} />
+                            <Rating rating={logement.rating} />
+                        </ProfilWrapper>
+                    </Columns>
 
-                        <CollapseWrapper>
-                            <Collapse title="Description">
-                                <p>{logement.description}</p>
-                            </Collapse>
+                    <CollapseWrapper>
+                        <Collapse title="Description">
+                            <p>{logement.description}</p>
+                        </Collapse>
 
-                            <Collapse title="Équipements">
-                                <ul>
-                                    {logement.equipments.map((equipment) => {
-                                        return (
-                                            <li key={equipment}>{equipment}</li>
-                                        )
-                                    })}
-                                </ul>
-                            </Collapse>
-                        </CollapseWrapper>
-                    </Container>
-                </Flex>
-            </div>
+                        <Collapse title="Équipements">
+                            <ul>
+                                {logement.equipments.map((equipment) => {
+                                    return <li key={equipment}>{equipment}</li>
+                                })}
+                            </ul>
+                        </Collapse>
+                    </CollapseWrapper>
+                </Container>
+            </Flex>
         </>
     )
 }

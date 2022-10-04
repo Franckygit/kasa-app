@@ -9,24 +9,37 @@
     margin-top: 40px;
 }
 
-.background-about {
+.background {
     display: flex;
     border-radius: 15px;
-    width: 80%;
+    min-width: 80%;
     filter: grayscale(50%) brightness(75%) contrast(2);
     background-size: cover;
+    background-image: url(../../Assets/cut-cliffs.PNG);
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
     justify-content: center;
     align-items: center;
-    background-image: url(../Assets/cut-mountains.PNG);
 }
 
-.background img {
-    border-radius: 15px;
-    object-fit: fill;
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%;
+.background-text {
+    display: flex;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0em;
+}
+
+@media (min-width: 1024px) {
+    .background-text {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .background-text {
+        font-size: 42px;
+    }
 }

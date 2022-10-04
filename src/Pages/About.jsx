@@ -5,10 +5,8 @@ import AboutInfos from '../Components/About'
 const About = () => {
     return (
         <>
-            <div className="content">
-                <Banner />
-                <AboutInfos />
-            </div>
+            <Banner />
+            <AboutInfos />
         </>
     )
 }
