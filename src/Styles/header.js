@@ -36,7 +36,7 @@ const Container = styled.div`
 const Navlink = styled(NavLink)`
     font-size: 18px;
     line-height: 34px;
-    margin-right: 57px;
+    margin-right: 25px;
     font-weight: 500;
     text-decoration: none;
     color: #ff6060;
